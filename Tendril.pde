@@ -19,6 +19,9 @@ class Tendril
   }
   public void show()
   {
+    if (myNumSegments<1) {
+      stroke(61, 43, 4);
+    }
     double startX = myX;
     double startY = myY;
     double endX = myX;
@@ -27,7 +30,7 @@ class Tendril
       myAngle = myAngle + (Math.random()*0.4)-0.2;
       endX = startX+Math.cos(myAngle)*SEG_LENGTH;
       endY = startY+Math.sin(myAngle)*SEG_LENGTH;
-      stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
+      //stroke((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
       line((float)startX,(float)startY,(float)endX,(float)endY);
       startX = endX;
       startY = endY;
